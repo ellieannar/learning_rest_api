@@ -73,4 +73,4 @@ COPY --from=build /bin/server /bin/
 EXPOSE 3333
 
 # What the container should run when it is started.
-ENTRYPOINT [ "/bin/server" ]
+ENTRYPOINT [ "/bin/server", "/foo" ]
