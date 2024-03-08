@@ -2,10 +2,10 @@ apiVersion: v1
 kind: Pod
 metadata: 
   name: restapi-pod
-  namespace: myAPINamespace
+  namespace: my-api-namespace
 spec: 
   containers: 
   - name: restapi-container
-    image: restapi
+    image: docker.io/ellieanna/restapi-docker:v1
     ports: 
-    - containerPort: 3333:3333
+    - containerPort: 3333

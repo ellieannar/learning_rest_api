@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata: 
   name: restapi-deployment
+  namespace: my-api-namespace
 spec:
   replicas: 3
   selector:
@@ -14,6 +15,6 @@ spec:
     spec:
       containers:
       - name: restapi-container
-        image: restapi-image:latest
+        image: docker.io/ellieanna/restapi-docker:v1
         ports:
         - containerPort: 3333
