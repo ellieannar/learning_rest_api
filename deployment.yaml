@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: restapi-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: restapi
+  template:
+    metadata:
+      labels:
+        app: restapi
+    spec:
+      containers:
+      - name: restapi-container
+        image: restapi-image:latest
+        ports:
+        - containerPort: 3333
