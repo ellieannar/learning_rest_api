@@ -20,14 +20,11 @@ import (
 	"io"
 	"math/rand"
 	"net/http"
-	"sync"
 	"time"
 
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
-
-var mu sync.Mutex
 
 var up = prometheus.NewGauge(
 	prometheus.GaugeOpts{
