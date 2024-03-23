@@ -85,9 +85,7 @@ func barHandler(w http.ResponseWriter, r *http.Request) {
 func UpFunction() {
 	go func() {
 		for {
-			mu.Lock()
 			up.Set(float64(rand.Intn(2))) // Set up to be either 0 or 1 randomly
-			mu.Unlock()
 			time.Sleep(60 * time.Second)
 		}
 	}()
